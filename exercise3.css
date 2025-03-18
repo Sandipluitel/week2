@@ -1,0 +1,109 @@
+header, footer {
+  color: white;
+  background-color: #213643;
+}
+
+nav {
+  background-color: #728B96;
+}
+
+h1, h2, h3 {
+  font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+}
+
+body {
+  font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+
+#reviews {
+  border-bottom: solid 3pt #213643;
+  color: #ed8030;
+}
+
+/* Change all <p> elements */
+p {
+  color: #983C2A;
+}
+
+/* Change only <p> inside <section> */
+section p {
+  color: #983C2A;
+}
+
+/* Change only <p> inside <div> */
+div p {
+  color: #983C2A;
+}
+
+/* Change only direct child <p> inside <section> */
+section > p {
+  color: #983C2A;
+}
+
+/* Change the first <p> that comes right after <h3> */
+h3 + p {
+  color: #983C2A;
+}
+
+/* Change all <p> elements that follow an <h3> within the same parent */
+h3 ~ p {
+  color: #983C2A;
+}
+
+/* Style for class selector */
+.first {
+  color: #728B96;
+  font-style: italic;
+}
+
+/* Attribute selector */
+[title] {
+  cursor: help;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px dotted blue;
+}
+
+/* Attribute selector for exact match */
+[title="Central Park"] {
+  border-bottom: 2px dotted red;
+}
+
+/* Attribute selector for partial match */
+[title*="Central"] {
+  border-bottom: 2px dotted green;
+}
+
+/* Attribute selector for starts with */
+[title^="Central"] {
+  border-bottom: 2px dotted purple;
+}
+
+/* Pseudo-class selectors */
+a:link {
+  font-weight: bold;
+  color: #47B3D7;
+}
+
+a:visited {
+  color: #BB78FF;
+}
+
+a:hover {
+  background-color: #FFFF99;
+}
+
+/* Styling the navigation bar */
+nav ul li {
+  list-style: none;
+  display: inline;
+  margin: 1em;
+}
+
+nav {
+  padding: 0.25em;
+}
+
+nav a {
+  padding: 0.25em;
+}
