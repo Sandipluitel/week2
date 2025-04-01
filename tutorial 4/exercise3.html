@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <form action="dashboard.jsp" method="post" onsubmit="return validateLogin()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br/>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br/>
+        
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            // Predefined credentials
+            var validUsername = "admin";
+            var validPassword = "password123";
+            
+            if (username === validUsername && password === validPassword) {
+                alert("Login successful!");
+                return true;
+            } else {
+                alert("Invalid username or password!");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

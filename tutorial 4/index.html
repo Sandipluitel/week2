@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- In the last lab, we created forms to get user data. It is very important to validate that data.
+In this question you need to write a JS code to verify that username is not empty and
+password is eight characters long. For creating a form you can use the following code -->
+
+    <form name="myForm" method="post" action="#" onsubmit="return validateForm()">
+        Name: <input type="text" name="name"><br/>
+        Password: <input type="password" name="password"><br/>
+        <input type="submit" value="register">
+    </form>
+
+
+
+    <script>
+        var heading = document.createElement("h1");
+        heading.textContent = "Welcome to My Web Page";
+        document.body.appendChild(heading);
+        var paragraph1 = document.createElement("p");
+        paragraph1.textContent = "This is the first paragraph of my web page.";
+        document.body.appendChild(paragraph1);
+
+        var paragraph2 = document.createElement("p");
+        paragraph2.textContent = "This is the second paragraph of my web page.";
+        document.body.appendChild(paragraph2);
+
+        function validateForm() {
+            event.preventDefault();
+            var name = document.forms["myForm"]["name"].value;
+            var password = document.forms["myForm"]["password"].value;
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long");
+                return false;
+            }
+            var paragraph = document.createElement("p");
+            paragraph.textContent = "Form submitted successfully!";
+            document.body.appendChild(paragraph);
+        }
+    </script>
+</body>
+</html>

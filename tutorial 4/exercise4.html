@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+</head>
+<body>
+    <h2>Enter something here</h2>
+    <input type="text" id="input1" onfocus="focusevent()" onmouseover="hoverevent()" onmouseout="resetevent()"/>
+    <script>
+        function focusevent() {
+            document.getElementById("input1").style.background = "aqua";
+        }
+        
+        function hoverevent() {
+            document.getElementById("input1").style.background = "lightyellow";
+        }
+        
+        function resetevent() {
+            document.getElementById("input1").style.background = "white";
+        }
+    </script>
+</body>
+</html>
